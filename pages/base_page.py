@@ -12,3 +12,4 @@ class BasePage():
         except (NoSuchElementException):
             return False
         return True
+
