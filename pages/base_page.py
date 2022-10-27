@@ -16,6 +16,12 @@ class BasePage():
     def open(self):
         self.browser.get(self.url)
 
+    def input_text(self, field, text):
+        self.browser.find_element(*field).send_keys(text)
+
+    def click_on(self, element):
+        self.browser.find_element(*element).click()
+
 
     def go_to_login_page(self):
             link = self.browser.find_element(*BasePageLocators.LOGIN_LINK)
@@ -66,4 +72,8 @@ class BasePage():
             return False
 
         return True
+
+    def should_be_authorized_user(self):
+        assert self.is_element_present(*BasePageLocators.USER_ICON), "User icon is not presented," \
+                                                                     " probably unauthorised user"
 
