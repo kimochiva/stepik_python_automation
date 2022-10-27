@@ -7,8 +7,6 @@ class ProductPage(BasePage):
         add_to_basket_button = self.browser.find_element(*ProductPageLocators.ADD_TO_BASKET_BUTTON)
         add_to_basket_button.click()
 
-    def open(self):
-        self.browser.get(self.url)
 
     def get_product_title(self):
         return self.browser.find_element(*ProductPageLocators.PRODUCT_TITLE).text
