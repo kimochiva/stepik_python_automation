@@ -9,7 +9,6 @@ import pytest
                                    "offer8", "offer9", "offer10"])
 
 def test_add_item_to_basket(browser, promo):
-    #link = "http://selenium1py.pythonanywhere.com/catalogue/the-shellcoders-handbook_209/?promo=newYear"
     link = "http://selenium1py.pythonanywhere.com/catalogue/coders-at-work_207/?promo=" + promo
     page = ProductPage(browser, link)
     page.open()
