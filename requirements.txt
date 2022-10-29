@@ -1,3 +1,5 @@
 pytest == 7.2.0
 selenium == 4.5.0
-webdriver-manager == 3.8.3
+webdriver-manager == 3.8.3 # this package is used instead of chrome driver file
+###  e.g. browser = webdriver.Chrome(ChromeDriverManager().install()) instead of
+###  browser = webdriver.Chrome(executable_path=r"C:\path\to\chromedriver.exe")

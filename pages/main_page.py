@@ -1,5 +1,4 @@
 from .base_page import BasePage
-import pytest
 
 class MainPage(BasePage):
 
